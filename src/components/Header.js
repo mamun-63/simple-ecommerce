@@ -13,23 +13,23 @@ const Header = () => {
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='ml-auto'>
-              <LinkContainer to='/statistics'>
-                <Nav.Link>Statistics</Nav.Link>
+              <LinkContainer to='/about'>
+                <Nav.Link>About</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to='/products'>
+                <Nav.Link>Products</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to='/stats'>
+                <Nav.Link>Stats</Nav.Link>
               </LinkContainer>
               <LinkContainer to='/add'>
-                <Nav.Link>Add-Products</Nav.Link>
-              </LinkContainer>
-              <LinkContainer to='/display'>
-                <Nav.Link>Display-Products</Nav.Link>
+                <Nav.Link>Add_Products</Nav.Link>
               </LinkContainer>
               <LinkContainer to='/update'>
-                <Nav.Link>Update-Products</Nav.Link>
+                <Nav.Link>Update_Products</Nav.Link>
               </LinkContainer>
               <LinkContainer to='/login'>
                 <Nav.Link>Login</Nav.Link>
-              </LinkContainer>
-              <LinkContainer to='/about'>
-                <Nav.Link>About</Nav.Link>
               </LinkContainer>
             </Nav>
           </Navbar.Collapse>

@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
-import products from '../products'
+import React, { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
+import { useStateValue } from '../context/StateProvider'
 
 const AddProduct = () => {
   const [name, setName] = useState('')
@@ -8,12 +8,13 @@ const AddProduct = () => {
   const [profitPercentage, setProfitPercentage] = useState('')
   const [category, setCategory] = useState('RAM')
 
-  const handleSubmit = evt => {
-    evt.preventDefault()
-    // alert(`Submitting Name, Price, Profit ${name} ${price} ${profitPercentage}`)
+  const [{ basket }, dispatch] = useStateValue()
+
+  const handleSubmit = e => {
+    e.preventDefault()
 
     if (!name || !price || !profitPercentage) {
-      alert('Fill empty fields')
+      alert('Fill Empty Fields')
     } else {
       let newProduct = {
         id: uuidv4(),
@@ -23,11 +24,9 @@ const AddProduct = () => {
         category: category,
       }
       console.log(newProduct)
-      products.push(newProduct)
-      console.log('Products Array >', products)
-
-      // clearing form
-      // document.forms[0].querySelectorAll('input')
+      basket.push(newProduct)
+      console.log('Products Array >', basket)
+      alert('Product Added Successfully')
     }
   }
 
@@ -53,10 +52,7 @@ const AddProduct = () => {
         <option value='Motherboard'>Motherboard</option>
         <option value='Graphics Card'>Graphics Card</option>
       </select>
-      {/* <input type='submit' value='Submit' /> */}
-      <button type='submit' value='Submit'>
-        Submit
-      </button>
+      <input type='submit' value='Submit' />
     </form>
   )
 }

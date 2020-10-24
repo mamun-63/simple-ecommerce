@@ -2,19 +2,16 @@ main {
   min-height: 80vh;
 }
 
-h2 {
+h2,
+h4 {
   padding: 1rem 0;
-}
-
-h5 {
-  margin-top: 3em;
-  text-transform: none;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  float: right;
+  width: 49%;
 }
 
 input {

@@ -5,6 +5,8 @@ import About from './components/About'
 import AddProduct from './components/AddProduct'
 import Footer from './components/Footer'
 import Header from './components/Header'
+import Stats from './components/Stats'
+import UpdateProduct from './components/UpdateProduct'
 import ProductScreen from './screens/ProductScreen'
 
 const App = () => {
@@ -15,7 +17,9 @@ const App = () => {
         <Container>
           <Route path='/about' component={About} />
           <Route path='/products' component={ProductScreen} />
+          <Route path='/stats' component={Stats} />
           <Route path='/add' component={AddProduct} />
+          <Route path='/update' component={UpdateProduct} />
         </Container>
       </main>
       <Footer />

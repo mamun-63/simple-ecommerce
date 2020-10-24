@@ -24,12 +24,6 @@ const reducer = (state, action) => {
 
   switch (action.type) {
     // listen action
-    case 'ADD_TO_BASKET':
-      console.log('action item > ', action.item.id)
-      return {
-        ...state,
-        basket: [...state.basket, action.item],
-      }
 
     case 'REMOVE_FROM_BASKET':
       console.log('removing id is ', action.id)

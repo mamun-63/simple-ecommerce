@@ -2,6 +2,7 @@ import React from 'react'
 import { LinkContainer } from 'react-router-bootstrap'
 import { Nav, Navbar, Container } from 'react-bootstrap'
 
+// Link.Container , prevent loading pages
 const Header = () => {
   return (
     <header>
